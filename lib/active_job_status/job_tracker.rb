@@ -11,7 +11,8 @@ module ActiveJobStatus
     end
 
     def self.remove(job_id:)
-      ActiveJobStatus.store.delete(job_id)
+      # ActiveJobStatus.store.delete(job_id)
+      return true
     end
   end
 end
