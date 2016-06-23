@@ -10,9 +10,8 @@ module ActiveJobStatus
       ActiveJobStatus.store.write(job_id, status.to_s)
     end
 
-    def self.remove(job_id:)
-      # ActiveJobStatus.store.delete(job_id)
-      return true
+    def self.complete(job_id:, status:)
+      ActiveJobStatus.store.write(job_id, status.to_s)
     end
   end
 end
